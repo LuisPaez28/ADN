@@ -23,6 +23,7 @@ nucleotidoGC = [g,c]
 
 #Base de ADN
 #5' = fosfato + [ribosa - nucleotido] + fosfato + [ribosa - nucleotido]
+
 #3' = fosfato + [ribosa - nucleotido] + fosfato + [ribosa - nucleotido]
 #Comparas los nucleotidos 
 
@@ -70,18 +71,7 @@ for x in range(1000):
     fos1.left(90)
     fos1.forward(inicio+2)
 
-    fos2=turtle.Turtle()
-    fos2.hideturtle()
-    fos2.color('black')
-    fos2.pensize(8)
-    fos2.penup()
-    fos2.forward(60)
-    fos2.left(90)
-    fos2.pendown()
-    fos2.forward(inicio+2)
-
     elegido = posibilidades[randrange(4)]
-
 #nucleotido para dibujar todo desde aquí.
     nucleotido = turtle.Turtle()
     nucleotido.hideturtle()
@@ -104,6 +94,18 @@ for x in range(1000):
     nucleotido.right(90)
 #Mover (y dibujar) en 30
     nucleotido.forward(30)
+
+#Esta es la parte 2
+
+    fos2=turtle.Turtle()
+    fos2.hideturtle()
+    fos2.color('black')
+    fos2.pensize(8)
+    fos2.penup()
+    fos2.forward(60)
+    fos2.left(90)
+    fos2.pendown()
+    fos2.forward(inicio+2)
 #Dejar de mostrar la flecha
 #    nucleotido.hideturtle()
 #Cambiar el color de pintado de la flecha

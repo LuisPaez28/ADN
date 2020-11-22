@@ -54,7 +54,7 @@ def colorin(nucleoti):
         fos1.pensize(8)
         fos1.left(90)
         fos1.forward(inicio+2)
-#nucleotido para dibujar todo desde aquí.
+    #nucleotido para dibujar todo desde aquí.
         nucleotido = turtle.Turtle()
         nucleotido.hideturtle()
         nucleotido.speed(10)
