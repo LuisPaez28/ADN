@@ -105,16 +105,12 @@ for x in range(100):
     #Hacemos revision en el primer nucleotido
     if n1==t:
         n5=a
-        print(n5)
     if n1==g:
         n5=c
-        print(n5)
     if n1==a:
         n5=t
-        print(n5)
     if n1==c:
         n5=g
-        print(n5)
     #Hacemos revision en el segundo nucleotido
     if n2==t:
         n6=a
