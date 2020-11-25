@@ -1,5 +1,6 @@
 import turtle
 from random import randrange
+import math 
 
 #Creo los nucleotidos por separado
 #Cada letra dentro de un nucleotido se refiere a un atomo  o enlace. Por ejemplo la N es el nitrogeno, la O el oxigeno, etc. 
@@ -13,7 +14,9 @@ t = ['N','O','N','O','CH']
 c = ['N','N','O','NH']
 
 #Arreglo con todas las posibilidades
-posibilidades = [a,g,t,c]
+posibilidades = [a,g,t,c,a,g,t,c,a,g,t,c,a,g,t,c]
+posiAT = [a,t,a,t,g,c,a,t,c,g]
+posiCG = [c,g,c,g,a,t,c,g,a,t]
 
 def colorin(nucleoti):
     if nucleoti == a:
@@ -24,6 +27,11 @@ def colorin(nucleoti):
         return 'green'
     if nucleoti == c:
         return 'yellow'
+#Creo metodo para calcular la distribuci[on estandar]
+def distrNorm(aleatorio,media,desvEstandar):
+    sumatioria = math.fsum(aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio,aleatorio)
+    return (sumatioria-6)*desvEstandar+media
+
 inicio = 10
 inicio2 = 10
 
@@ -56,16 +64,16 @@ turtle.write("Citocina",False,"left",("arial", 18, "bold italic"))
 #Simulo el ADN
 for x in range(5):
 #Creo el 5' 
-    n1 = posibilidades[randrange(4)]
-    n2 = posibilidades[randrange(4)]
-    n3 = posibilidades[randrange(4)]
-    n4 = posibilidades[randrange(4)]
+    n1 = posiAT[randrange(10)]
+    n2 = posiCG[randrange(10)]
+    n3 = posiCG[randrange(10)]
+    n4 = posiCG[randrange(10)]
     cinco = [n1,n2,n3,n4]
 #Creo el 3'
-    n5 = posibilidades[randrange(4)]
-    n6 = posibilidades[randrange(4)]
-    n7 = posibilidades[randrange(4)]
-    n8 = posibilidades[randrange(4)]
+    n5 = posiAT[randrange(10)]
+    n6 = posiCG[randrange(10)]
+    n7 = posiAT[randrange(10)]
+    n8 = posiCG[randrange(10)]
     tres = [n5,n6,n7,n8]
 
     for y in range(4):
@@ -250,3 +258,4 @@ for x in range(5):
         nucleo.pencolor(usarColor)
         nucleo.forward(30)
         inicioBien+=10
+
