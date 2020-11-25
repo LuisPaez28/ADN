@@ -43,6 +43,8 @@ inicio3 = 10
 inicio23 = 10
 inicioBien3 = 10
 
+window = turtle.Screen()
+window.bgcolor('gray')
 turtle.title('ADN')
 turtle.setup(1530, 1000, 0, 0)
 turtle.screensize(20,8000)
